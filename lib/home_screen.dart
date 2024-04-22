@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_getx/screen_one.dart';
 import 'package:get/get.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -109,6 +110,25 @@ class _HomeScreenState extends State<HomeScreen> {
                 );
               },
             ),
+          ),
+          TextButton(
+            onPressed: () {
+              Get.toNamed(
+                "/screenOne",
+                arguments: [
+                  "One",
+                  "Mehedi Hasan",
+                ],
+              );
+              // Get.to(
+              //   const ScreenOne(
+              //     name: "One",
+              //   ),
+              // );
+              // Navigator.push(context,
+              //     MaterialPageRoute(builder: (context) => const ScreenOne()));
+            },
+            child: const Text("Go to next screen!"),
           ),
         ],
       ),
