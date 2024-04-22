@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_getx/screens/height_width_screen.dart';
 import 'package:flutter_getx/screens/home_screen.dart';
-import 'package:flutter_getx/screens/languages_chnage_screen.dart';
+import 'package:flutter_getx/screens/languages_change_screen.dart';
 import 'package:flutter_getx/screens/screen_one.dart';
 import 'package:flutter_getx/screens/screen_two.dart';
 import 'package:flutter_getx/utils/languages.dart';
