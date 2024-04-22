@@ -130,6 +130,11 @@ class _HomeScreenState extends State<HomeScreen> {
             },
             child: const Text("Go to next screen!"),
           ),
+          TextButton(
+              onPressed: () {
+                Get.toNamed("/language");
+              },
+              child: const Text("Language Change Screen"))
         ],
       ),
       floatingActionButton: FloatingActionButton(
