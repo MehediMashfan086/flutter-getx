@@ -25,6 +25,93 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
       ),
+      body: Column(
+        children: [
+          Card(
+            child: ListTile(
+              title: const Text("GetX Dialog Alert"),
+              subtitle: const Text("GetX Dialog Alert With GetX!"),
+              onTap: () {
+                Get.defaultDialog(
+                  title: "Delete",
+                  middleText: "Are you sure you want to delete this chat??",
+                  titlePadding: const EdgeInsets.only(top: 16),
+                  contentPadding: const EdgeInsets.all(16),
+                  confirm: TextButton(
+                    onPressed: () {
+                      // Navigator.pop(context);
+                      Get.back();
+                    },
+                    child: const Text(
+                      "Yes",
+                      style: TextStyle(
+                        color: Colors.green,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                  cancel: TextButton(
+                    onPressed: () {},
+                    child: const Text(
+                      "Cancel",
+                      style: TextStyle(
+                        color: Colors.red,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                );
+              },
+            ),
+          ),
+          Card(
+            child: ListTile(
+              title: const Text("GetX Bottom Sheet"),
+              subtitle: const Text("GetX Bottom Sheet With GetX!"),
+              onTap: () {
+                Get.bottomSheet(
+                  Container(
+                    decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(30),
+                          topRight: Radius.circular(30)),
+                      color: Colors.lightBlue,
+                    ),
+                    child: Column(
+                      children: [
+                        ListTile(
+                          leading: const Icon(
+                            Icons.light_mode,
+                          ),
+                          title: const Text(
+                            "Light Mode",
+                          ),
+                          onTap: () {
+                            Get.changeTheme(ThemeData.light());
+                          },
+                        ),
+                        ListTile(
+                          leading: const Icon(
+                            Icons.dark_mode,
+                          ),
+                          title: const Text(
+                            "Dark Mode",
+                          ),
+                          onTap: () {
+                            Get.changeTheme(ThemeData.dark());
+                          },
+                        ),
+                      ],
+                    ),
+                  ),
+                );
+              },
+            ),
+          ),
+        ],
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Get.snackbar(
