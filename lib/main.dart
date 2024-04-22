@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_getx/home_screen.dart';
-import 'package:flutter_getx/screen_one.dart';
-import 'package:flutter_getx/screen_two.dart';
+import 'package:flutter_getx/screens/height_width_screen.dart';
+import 'package:flutter_getx/screens/home_screen.dart';
+import 'package:flutter_getx/screens/screen_one.dart';
+import 'package:flutter_getx/screens/screen_two.dart';
 import 'package:get/get.dart';
 
 void main() {
@@ -33,6 +34,10 @@ class MyApp extends StatelessWidget {
         GetPage(
           name: "/screenTwo",
           page: () => const ScreenTwo(),
+        ),
+        GetPage(
+          name: "/heightWidth",
+          page: () => const HeightWidthScreen(),
         ),
       ],
     );

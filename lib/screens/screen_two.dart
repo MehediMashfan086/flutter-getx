@@ -41,6 +41,11 @@ class _ScreenTwoState extends State<ScreenTwo> {
               },
               child: const Text("Go Back to Home Screen!"),
             ),
+            TextButton(
+                onPressed: () {
+                  Get.toNamed("/heightWidth");
+                },
+                child: const Text("Go to Height Width Screen"))
           ],
         ),
       ),
